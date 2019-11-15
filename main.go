@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
-	//"math"
+	"math"
 	"os"
 	"strings"
 	"time"
@@ -53,7 +53,7 @@ func Clock() func() int {
 
 // минимальное число массива
 func MinArrayValue(array []int) int {
-	min := 9223372036854775807;
+	min := 9223372036854775807
 	for i := 0; i < len(array); i++ {
 		if array[i] <= min {
 			min = array[i]
@@ -64,7 +64,7 @@ func MinArrayValue(array []int) int {
 
 // максимальное число массива
 func MaxArrayValue(array []int) int {
-	max := -9223372036854775808;
+	max := -9223372036854775808
 	for i := 0; i < len(array); i++ {
 		if array[i] >= max {
 			max = array[i]
@@ -141,20 +141,18 @@ func dirTree(path string, space string) {
 	}
 }
 
-func backgroundWorkerOne()  {
-	for{
-		select {
-
-		}
+func backgroundWorkerOne() {
+	for {
+		select {}
 	}
 }
 
-func backgroundWorkerTwo()  {
+func backgroundWorkerTwo() {
 
 }
 
 func main() {
-/*
+
 	//	1
 	x := float64(256)
 	fmt.Println("x = ", x)
@@ -211,8 +209,5 @@ func main() {
 		os.Exit(1)
 	}
 	dirTree(pwd, "└──")
-	*/
-	crc32InUint32 := crc32.ChecksumIEEE([]byte("Checksum returns uint32"))
-	crc32InString := strconv.FormatUint(uint64(crc32InUint32), 16)
-	fmt.Println(crc32InString)
+
 }
